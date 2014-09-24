@@ -50,4 +50,11 @@ public class DContainer {
         return abilities;
     }
 
+    public static List<DFeat> getFeats(){
+        if(feats==null){
+            initFeats();
+        }
+        return feats;
+    }
+
 }

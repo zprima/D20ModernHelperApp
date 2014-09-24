@@ -8,13 +8,13 @@ import java.util.UUID;
  * Created by Primoz on 21.9.2014.
  */
 public class DFeat {
-    UUID id;
-    String name;
-    String description;
-    String prerequisite;
-    String benefit;
-    String normal;
-    String special;
+    public UUID id;
+    public String name;
+    public String description;
+    public String prerequisite;
+    public String benefit;
+    public String normal;
+    public String special;
 
     DFeat(){
         this.id = UUID.randomUUID();
@@ -740,39 +740,249 @@ public class DFeat {
         feats.add(tmp);
 
         tmp = new DFeat();
-        tmp.name = "";
+        tmp.name = "Shot on the Run";
         tmp.description = "";
-        tmp.prerequisite = "";
-        tmp.benefit = "";
+        tmp.prerequisite = "Dexterity 13, Point Blank Shot, Dodge, Mobility.";
+        tmp.benefit = "When using an attack action with a ranged weap¬on, the character can move both before and after the attack, provided that the character’s total distance moved is not greater than his or her speed.";
         tmp.normal = "";
         tmp.special = "";
         feats.add(tmp);
 
         tmp = new DFeat();
-        tmp.name = "";
+        tmp.name = "Simple Weapons Proficiency";
         tmp.description = "";
         tmp.prerequisite = "";
-        tmp.benefit = "";
+        tmp.benefit = "The character makes attack rolls with simple weapons normally.";
+        tmp.normal = "A character without this feat takes the –4 nonproficient penalty when making attacks with simple weapons.";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Skip Shot";
+        tmp.description = "";
+        tmp.prerequisite = "Point Blank Shot, Precise Shot.";
+        tmp.benefit = "If the character has a solid, relatively smooth surface on which to skip a bullet (such as a street or a concrete wall), and a target within 10 feet of that surface, the character may ignore cover between the character and the target. However, the character receives a –2 penalty on his or her attack roll, and the character’s attack deals –1 die of damage. ";
+        tmp.normal = "";
+        tmp.special = "The surface doesn’t have to be perfectly smooth and level; a brick wall or an asphalt road can be used. The target can have no more than nine-tenths cover for A character to attempt a skip shot.";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Spring Attack";
+        tmp.description = "";
+        tmp.prerequisite = "Dexterity 13, Dodge, Mobility, base attack bonus +4.";
+        tmp.benefit = "When using an attack action with a melee weapon, the character can move both before and after the attack, provided that the total distance moved is not greater than the charater’s speed.\n" +
+                "Moving in this way does not provoke an attack of opportunity from the defender the character is attacking (though it can provoke attacks of opportunity from others, as normal).\n" +
+                "A character can’t use this feat if he or she is carrying a heavy load or wearing heavy armor.\n";
         tmp.normal = "";
         tmp.special = "";
         feats.add(tmp);
 
         tmp = new DFeat();
-        tmp.name = "";
+        tmp.name = "Stealthy";
         tmp.description = "";
         tmp.prerequisite = "";
-        tmp.benefit = "";
+        tmp.benefit = "The character gets a +2 bonus on all Hide checks and Move Silently checks. ";
         tmp.normal = "";
         tmp.special = "";
         feats.add(tmp);
 
         tmp = new DFeat();
-        tmp.name = "";
+        tmp.name = "Strafe";
         tmp.description = "";
-        tmp.prerequisite = "";
-        tmp.benefit = "";
+        tmp.prerequisite = "Personal Firearms Proficiency, Advanced Firearms Proficiency.";
+        tmp.benefit = "When using a firearm on autofire, the character can affect an area four 5-foot squares long and one square wide (that is, any four squares in a straight line).";
+        tmp.normal = "A firearm on autofire normally affects a 10-foot-by-10-foot area.";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Streetfighting";
+        tmp.description = "";
+        tmp.prerequisite = "Brawl, base attack bonus +2.";
+        tmp.benefit = "Once per round, if the character makes a successful melee attack with an unarmed strike or a light weapon, the character deals an extra 1d4 points of damage.";
         tmp.normal = "";
         tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Studious";
+        tmp.description = "";
+        tmp.prerequisite = "";
+        tmp.benefit = "The character gets a +2 bonus on all Decipher Script checks and Research checks. ";
+        tmp.normal = "";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Sunder";
+        tmp.description = "";
+        tmp.prerequisite = "Strength 13, Power Attack.";
+        tmp.benefit = "When the character strikes an object held or carried by an opponent, such as a weapon, the character does not provoke an attack of opportunity.\n" +
+                "The character gains a +4 bonus on any attack roll made to attack an object held or carried by another character. The character deals double normal damage to objects, whether they are held or carried or not.\n";
+        tmp.normal = "A character without this feat incurs an attack of opportunity when he or she strikes at an object held or carried by another character.";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Surface Vehicle Operation";
+        tmp.description = "Select a class of surface vehicle (heavy wheeled, powerboat, sailboat, ship, or tracked). The character is proficient at operating that class of vehicle.\n" +
+                "The heavy wheeled class includes all kinds of semi-trucks and tractor-trailers, as well as wheeled construction ve¬hicles (such as earth movers) and wheeled armored vehicles (such as some armored personnel carriers). Powerboats are engine-powered water vessels designed for operation by a single person and usually no more than 100 feet in length. Sailboats are wind-powered water vessels. Ships are large, multicrewed water vessels. Tracked vehicles include bulldozers and tanks and other military vehicles.\n";
+        tmp.prerequisite = "Drive 4 ranks.";
+        tmp.benefit = "The character takes no penalty on Drive checks or attack rolls made when operating a surface vehicle of the selected class.";
+        tmp.normal = "Characters without this feat take a –4 penalty on Drive checks made to operate a surface vehicle that falls under any of these classes, and to attacks made with vehicle weapons. There is no penalty when you operate a general-purpose surface vehicle.";
+        tmp.special = "A character can gain this feat as many as five times. Each time the character takes the feat, he or she selects a different class of surface vehicle.";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Surgery";
+        tmp.description = "";
+        tmp.prerequisite = "Treat Injury 4 ranks.";
+        tmp.benefit = "The character can use the Treat Injury skill to perform surgery without penalty.  See the Treat Injury skill description.";
+        tmp.normal = "Characters without this feat take a –4 penalty on Treat Injury checks made to perform surgery.";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Toughness";
+        tmp.description = "";
+        tmp.prerequisite = "";
+        tmp.benefit = "The character gains +3 hit points.";
+        tmp.normal = "";
+        tmp.special = "A character may gain this feat multiple times. Its effects stack.";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Track";
+        tmp.description = "";
+        tmp.prerequisite = "";
+        tmp.benefit = "To find tracks or follow them for one mile requires a Survival check. The character must make another Survival check every time the tracks become difficult to follow.\n" +
+                "The character moves at half his or her normal speed (or at the character’s normal speed with a –5 penalty on the check, or at up to twice the character’s speed with a –20 penalty on the check). The DC depends on the surface and the prevailing conditions.\n" +
+                "Surface\tTrack DC\n" +
+                "Very soft\t5\n" +
+                "Soft\t10\n" +
+                "Firm\t15\n" +
+                "Hard\t20\n" +
+                "Very Soft: Any surface (fresh snow, thick dust, wet mud) that holds deep, clear impressions of footprints.\n" +
+                "Soft: Any surface soft enough to yield to pressure, but firmer than wet mud or fresh snow, in which the quarry leaves frequent but shallow footprints.\n" +
+                "Firm: Most normal outdoor or exceptionally soft or dirty indoor surfaces. The quarry might leave some traces of its passage, but only occasional or partial footprints can be found.\n" +
+                "Hard: Any surface that doesn’t hold footprints at all, such as bare rock, concrete, metal deckings, or indoor floors. The quarry leaves only traces, such as scuff marks.\n" +
+                "If the character fails a Survival check, he or she can retry after 1 hour (out¬doors) or 10 minutes (indoors) of searching.\n";
+        tmp.normal = "A character without this feat can use the Survival skill to find tracks, but can only follow tracks if the DC is 10 or less. A character can use the Search skill to find individual footprints, but cannot follow tracks using Search.\n" +
+                "Condition\tDC Modifier\n" +
+                "Every three targets in the group being tracked\t–1\n" +
+                "Size of targets being tracked: 1\t\n" +
+                "Fine\t+8\n" +
+                "Diminutive\t+4\n" +
+                "Tiny\t+2\n" +
+                "Small\t+1\n" +
+                "Medium-size\t+0\n" +
+                "Large\t–1\n" +
+                "Huge\t–2\n" +
+                "Gargantuan\t–4\n" +
+                "Colossal\t-8\n" +
+                "Every 24 hours since the trail was made\t+1\n" +
+                "Every hour of rain since the trail was made\t+1\n" +
+                "Fresh snow cover since the trail was made\t+10\n" +
+                "Poor visibility: 2\t\n" +
+                "Overcast or moonless night\t+6\n" +
+                "Moonlight\t+3\n" +
+                "Fog or precipitation\t+3\n" +
+                "Tracked target hides trail (and moves at half speed)\t+5\n" +
+                "1 For a group of mixed sizes, apply only the modifier for the largest size category represented.\n";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Trustworthy";
+        tmp.description = "";
+        tmp.prerequisite = "";
+        tmp.benefit = "The character gets a +2 bonus on all Diplomacy checks and Gather Information checks. ";
+        tmp.normal = "";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Two-Weapon Fighting";
+        tmp.description = "";
+        tmp.prerequisite = "Dexterity 13";
+        tmp.benefit = "The character’s penalties for fighting with two weapons are lessened by 2 for the primary hand and 6 for the off hand.\n" +
+                "The weapons used must both be melee weapons or both be ranged weapons (the character can’t mix the types).\n";
+        tmp.normal = "";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Unbalance Opponent";
+        tmp.description = "";
+        tmp.prerequisite = "Defensive Martial Arts, base attack bonus +6.";
+        tmp.benefit = "During the character’s action, the character designates an opponent no more than one size category larger or smaller than the character. That opponent doesn’t get to add his or her Strength modifier to attack rolls when targeting the character. (If the opponent has a Strength penalty, he or hse still takes that penalty.)\n" +
+                "The opponent’s Strength modifier applies to damage, as usual.\n" +
+                "The character can select a new opponent on any action.\n";
+        tmp.normal = "";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Vehicle Dodge";
+        tmp.description = "";
+        tmp.prerequisite = "Dexterity 13, Drive 6 ranks or Pilot 6 ranks, Vehicle Expert.";
+        tmp.benefit = "When driving a vehicle, during the character’s action the character designates an opposing vehicle or a single opponent. The character’s vehicle and everyone aboard it receive a +1 dodge bonus to Defense against attacks from that vehicle or opponent. The character can select a new vehicle or opponent on any action.";
+        tmp.normal = "";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Vehicle Expert";
+        tmp.description = "";
+        tmp.prerequisite = "";
+        tmp.benefit = "The character gets a +2 bonus on all Drive checks and Pilot checks.";
+        tmp.normal = "";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Weapon Finesse";
+        tmp.description = "Choose one light melee weapon, a rapier (if the character can use it with one hand), or a chain.  A character can choose unarmed strike or grapple as a weapon for the purposes of this feat.";
+        tmp.prerequisite = "Proficient with weapon, base attack bonus +1.";
+        tmp.benefit = "With the selected melee weapon, the character may use his or her Dexterity modifier instead of his or her Strength modifier on attack rolls.";
+        tmp.normal = "";
+        tmp.special = "A character can gain this feat multiple times. Each time the character takes the feat, the character selects a ¬different weapon";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Weapon Focus";
+        tmp.description = "Choose a specific weapon. A character can choose unarmed strike or grapple for your weapon for purposes of this feat.";
+        tmp.prerequisite = "Proficient with weapon, base attack bonus +1.";
+        tmp.benefit = "The character gains a +1 bonus on all attack rolls he or she makes using the selected weapon.";
+        tmp.normal = "";
+        tmp.special = "A character can gain this feat multiple times. Each time the character takes the feat, the character must select a different weapon.";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Whirlwind Attack";
+        tmp.description = "";
+        tmp.prerequisite = "Dexterity 13, Intelligence 13, Dodge, Mobility, Spring Attack, Combat Expertise, base attack bonus +4.";
+        tmp.benefit = "When the character performs a full-round action, the character can give up his or her regular attacks and instead make one melee attack at the character’s highest base attack bonus against each adjacent opponent.";
+        tmp.normal = "";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Wild Talent ";
+        tmp.description = "";
+        tmp.prerequisite = "";
+        tmp.benefit = "Select one 0-level psionic power. The character can manifest this power up to three times in a 24-hour period. There is no power point cost for using this power. For effects that depends on manifester level the character is considered 1st level or his or her manifester level, whichever is higher.";
+        tmp.normal = "";
+        tmp.special = "";
+        feats.add(tmp);
+
+        tmp = new DFeat();
+        tmp.name = "Windfall";
+        tmp.description = "";
+        tmp.prerequisite = "";
+        tmp.benefit = "The character’s Wealth bonus increases by +3. Also, this feat provides a +1 bonus on all Profession checks.";
+        tmp.normal = "";
+        tmp.special = "A character can select this feat multiple times. Each time, both of its effects stack.";
         feats.add(tmp);
 
         return feats;
