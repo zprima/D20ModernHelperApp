@@ -62,6 +62,10 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent(getApplicationContext(), FeatsActivity.class);
                 startActivity(intent);
             }
+            else if(menuItem.keyword == DConstants.CLASSES){
+                Intent intent = new Intent(getApplicationContext(), ClassesActivity.class);
+                startActivity(intent);
+            }
 
         }
     };

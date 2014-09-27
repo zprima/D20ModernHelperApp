@@ -10,11 +10,13 @@ public class DContainer {
     public static List<DAbility> abilities = null;
     public static List<DMenuItem> menu = null;
     public static List<DFeat> feats = null;
+    public static List<DClass> classes = null;
 
     public static void initAll(){
         initMenu();
         initAbilities();
         initFeats();
+        initClasses();
     }
 
     public static void initAbilities(){
@@ -25,21 +27,19 @@ public class DContainer {
 
     public static void initMenu(){
         if(menu==null){
-            menu = new ArrayList<DMenuItem>();
-            menu.add(new DMenuItem("Abilities",DConstants.ABILITIES));
-            menu.add(new DMenuItem("Feats",DConstants.FEATS));
-            menu.add(new DMenuItem("Skills",DConstants.SKILLS));
-            menu.add(new DMenuItem("Classes",DConstants.CLASSES));
-            menu.add(new DMenuItem("Weapons",DConstants.WEAPONS));
-            menu.add(new DMenuItem("Armor", DConstants.ARMOR));
-            menu.add(new DMenuItem("Items",DConstants.ITEMS));
-            menu.add(new DMenuItem("D20 Dice",DConstants.D20DICE));
+            menu = DMenuItem.getMenu();
         }
     }
 
     public static void initFeats(){
         if(feats==null){
             feats = DFeat.getD20Feats();
+        }
+    }
+
+    public static void initClasses(){
+        if(classes==null){
+            classes = DClass.getD20Classes();
         }
     }
 
@@ -57,4 +57,10 @@ public class DContainer {
         return feats;
     }
 
+    public static List<DClass> getClasses(){
+        if(classes==null){
+            initClasses();
+        }
+        return classes;
+    }
 }

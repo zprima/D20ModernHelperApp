@@ -12,6 +12,7 @@ public class DConstants {
     public final static Character ARMOR = 'R';
     public final static Character ITEMS = 'I';
     public final static Character D20DICE = 'D';
+    public final static Character REFPDF = 'P';
 
     public final static String STR = "STR";
     public final static String DEX = "DEX";
@@ -19,4 +20,7 @@ public class DConstants {
     public final static String INT = "INT";
     public final static String WIS = "WIS";
     public final static String CHA = "CHA";
+
+    public final static String BASIC = "Basic";
+    public final static String ADVANCE = "Advance";
 }

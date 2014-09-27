@@ -18,14 +18,87 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/featName"
+            android:textColor="@color/red"
             android:textSize="24sp"
             android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/featPrerequisiteLabel"
+            android:textStyle="bold"
+            android:text="Prerequisite:"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/featPrerequisite"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/purple"
+            android:text="Prerequisite"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/featBenefitLabel"
+            android:textStyle="bold"
+            android:text="Benefit:"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/featBenefit"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/green"
+            android:text="Benefit"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/featSpecialLabel"
+            android:textStyle="bold"
+            android:text="Special:"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/featSpecial"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/blue"
+            android:text="Special"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/featDescriptionLabel"
+            android:textStyle="bold"
+            android:text="Description:"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/featDescription"
+            android:layout_marginBottom="10dp"
             android:text="Description"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/featNormalLabel"
+            android:textStyle="bold"
+            android:text="Normal:"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/featNormal"
+            android:text="Normal"
             android:textSize="20sp"/>
 
     </LinearLayout>

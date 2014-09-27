@@ -42,8 +42,6 @@ public class MainMenuListAdapter extends ArrayAdapter<DMenuItem>{
         }
 
         DMenuItem item = getItem(position);
-        //TextView textView = (TextView)convertView.findViewById(R.id.menuItemLabel);
-        //textView.setText(item.name);
         viewHolder.menuItemLabel.setText(item.name);
 
         return convertView;
